@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<math.h>
 int board[20],count;
+int place(int row, int column);
+void print(int n);
 void queen(int row,int n)
 {
  int column;
