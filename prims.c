@@ -12,13 +12,11 @@ int main()
     scanf("%d",&cost[i][j]);
     if(cost[i][j]==0)
       cost[i][j]=999;
- 
   }
   visited[1]=1;
   printf("\n");
   while(ne < n)
   {
-    
     for(i=1,min=999;i<=n;i++)
     for(j=1;j<=n;j++)
     {
@@ -39,7 +37,6 @@ int main()
       mincost+=min;
       visited[b]=1;
     }
-
     cost[a][b]=cost[b][a]=999;
   }
   printf("\n Minimun cost=%d",mincost);
