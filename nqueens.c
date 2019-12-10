@@ -1,23 +1,6 @@
 #include<stdio.h>
 #include<math.h>
 int board[20],count;
-int place(int row, int column);
-void print(int n);
-void queen(int row,int n)
-{
- int column;
- for(column=1;column<=n;++column)
- {
-  if(place(row,column))
-  {
-   board[row]=column;
-   if(row==n)
-    print(n);
-   else
-    queen(row+1,n);
-  }
- }
-}
 int place(int row,int column)
 {
  int i;
@@ -47,6 +30,21 @@ void print(int n)
     printf("\tQ");
    else
     printf("\t-");
+  }
+ }
+}
+void queen(int row,int n)
+{
+ int column;
+ for(column=1;column<=n;++column)
+ {
+  if(place(row,column))
+  {
+   board[row]=column;
+   if(row==n)
+    print(n);
+   else
+    queen(row+1,n);
   }
  }
 }
