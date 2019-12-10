@@ -38,8 +38,8 @@ void search(char pat[], char txt[], int q)
 } 
 int main() 
 { 
-    char txt[] = "SUNDON"; 
-    char pat[] = "DON"; 
+    char txt[] = "PANDIPILLA"; 
+    char pat[] = "PANDI"; 
     int q = 11;
     search(pat, txt, q); 
     return 0; 
